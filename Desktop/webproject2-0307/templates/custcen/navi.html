@@ -1,0 +1,37 @@
+{% load static %}
+
+{% block title %}
+    Navigation
+{% end block title %}
+
+{% block content %}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale1, shrink-to-fit=no">
+
+        <link rel="sytlesheet" type="text/css" href="{% static 'bootstrap.min.css %}">
+
+        <link rel="stylesheet" type="text/css" href="{% static 'pybo/style.css '%}">
+
+        <title>고객센터</title>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <a class="navbar-brand" href="{% url 'pybo:index' %}"> Pybo</a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                    data-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">로그인</a>
+                        <a class="nav-link" href="#">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+{% end block content %}
