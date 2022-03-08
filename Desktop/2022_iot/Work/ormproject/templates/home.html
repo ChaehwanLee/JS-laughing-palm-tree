@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ae10419a0b57d3f2140fddf4c88173df"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
     <style>
 
@@ -30,6 +38,11 @@
             <li><a href="/item/a">Item</a></li>
             <li><a href="/item/iv">Add Item</a></li>
             <li><a href="/cart/a">Cart</a></li>
+            <li><a href="/geo">Geo</a></li>
+            <li><a href="/geo2">Geo2</a></li>
+            <li><a href="/ajax">ajax</a></li>
+            <li><a href="/chart1">chart1</a></li>
+
         </ul>
     </nav>
     {% if center != None %}

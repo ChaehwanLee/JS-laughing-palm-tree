@@ -1,0 +1,64 @@
+<style>
+    section > #container{
+        width:600px;
+        height:400px;
+        border: 2px solid red;
+    }
+
+</style>
+
+<script>
+
+    function display(data){
+        Highcharts.chart('container', {
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: 'Monthly Average Temperature'
+            },
+            subtitle: {
+                text: 'Source: WorldClimate.com'
+            },
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: 'Temperature (°C)'
+                }
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: true
+                    },
+                    enableMouseTracking: false
+                }
+            },
+            series: data
+        });
+    };
+
+    function getdata(){
+
+        $.ajax({
+            url:'chart1impl',
+            success:function(data){
+                display(data);
+            }
+        });
+
+        //display(data);
+    };
+
+    $(document).ready(function(){
+        getdata();
+    });
+
+</script>
+
+<section>
+    <h1>Chart1</h1>
+    <div id="container"></div>
+</section>

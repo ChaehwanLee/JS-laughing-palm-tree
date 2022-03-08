@@ -46,6 +46,29 @@ class MyView(View):
         # -------------------------------------------
         return render(request, 'ok.html');
 
+    @request_mapping("/chart1", method="get")
+    def chart1(self, request):
+        context = {
+            'center': 'chart1.html'
+        };
+        return render(request, 'home.html', context);
+
+    @request_mapping("/chart1impl", method="get")
+    def chart1impl(self, request):
+        data = [];
+        content1 = {};
+        content2 = {};
+
+        content1['name'] = 'seoul';
+        content1['data'] = [2, 3, 4, 9, 10, 20, 30, 20, 10, 8, 0];
+
+        content2['name'] = 'london';
+        content2['data'] = [0, 1, 2, 7, 9, 17, 27, 26, 18, 9, 5, -4];
+
+        data.append(content1);
+        data.append(content2);
+
+        return HttpResponse(json.dumps(data),content_type='application/json');
 
 
     @request_mapping("/login", method="get")
