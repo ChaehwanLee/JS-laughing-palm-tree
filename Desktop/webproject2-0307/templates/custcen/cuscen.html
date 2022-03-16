@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>고 객 센 터</title>
+</head>
+<body>
+<!--메뉴부분-->
+    <a href="/cs/">고객센터</a>
+    <ul class="list">
+        <li>
+            <a href="/board/" class="clickMap" data-clickmap="main-공지사항">공지사항 </a>
+        </li>
+        <li>
+            <a href="/cs/qna" class="clickMap" data-clickmap="main-자주하는질문">자주하는 질문</a>
+        </li>
+        <li>
+            <a href="/member/" class="clickMap" data-clickmap="main-1:1문의">1:1 문의</a>
+        </li>
+        <li>
+            <a href="/cs/uncon" class="clickMap" data-clickmap="main-미확인입금자">미확인 입금자</a>
+        </li>
+    </ul>
+
+    <div class="cuscen">
+        <div id="listboard">
+            <table class="board_col" cellspacing="1" cellpadding="0">
+                <caption class="hidden"> 목 록 </caption>
+                <colgroup>
+                    <col style="width:3%;">
+                    <col>
+                    <col style="width:10%;">
+                    <col style="width:20%;">
+                    <col style="width:15%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">Num</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">writer</th>
+                        <th scope="col">day</th>
+                        <th scope="col">view</th>
+
+                <tbody>
+                    <tr class="notice">
+                            <td><img src="#" alt="notice"></td>
+                            <td class="tal"><a href="/board/view">이 용 방 법</a></td>
+                            <td>1st group</td>
+                            <td class="date">2022-03-18</td>
+                            <td class="view">99,999</td>
+
+                    </tr>
+                </tbody>
+            </table>
+            <div class="paging">
+                <a class="first" href="javascript:" onclick="alert(&quot;첫페이지.&quot;)">first</a>
+                <a class="prev" href="javascript:" onclick="alert(&quot;첫페이지.&quot;)">prev</a>
+                    <ol>
+                        <li><a href="javascript:" class="active">1</a></li>
+                        <li><a href="/board/list.php?page=2&amp;boardid=csnotice">2</a></li>
+                    </ol>
+                <a class="next" href="/board/list.php?page=2&amp;boardid=csnotice">next</a>
+                <a class="last" href="/board/list.php?page=2&amp;boardid=csnotice">last</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

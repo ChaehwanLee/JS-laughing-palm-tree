@@ -1,0 +1,44 @@
+{% extends "custcen/base.html" %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock title %}
+
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" type='text/css' href="{% static 'css/style.css' %}">
+    <div class="content">
+        <div id="board_list">
+            <div id="board_list_title">
+                <div id="board_title">
+                    <h2>
+                        <span>공 지 사 항</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    <div class="board_view">
+        <table>
+            <tbody>
+            <tr>
+                <td>{{ post.title }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        {{ post.content }}
+                    </p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="board_bottom">
+        <span class="left">
+            <a href="{% url 'custcen:notice' %}">리 스 트</a>
+        </span>
+    </div>
+    </div>
+
+{% endblock content %}

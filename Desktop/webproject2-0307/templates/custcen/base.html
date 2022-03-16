@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %} </title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+</head>
+
+<body>
+
+{% block header %}
+
+{% endblock header %}
+
+<div class="con">
+    <div class="left-con">
+
+        {% block left_side %} {% include 'shop/left_side.html' %} {% endblock left_side %}
+
+    </div>
+
+    <div class="right-con">
+
+        {% block content %}
+
+        {% endblock content %}
+
+    </div>
+
+</div>
+{% block footer %} {% include 'shop/footer.html' %} {% endblock footer %}
+
+{% endblock %}
+
+</body>
+</html>
